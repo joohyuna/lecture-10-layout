@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { Link } from "react-router";
 
-
 const Head = styled.header`
     height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ccc;
+    background-color: ${props => props.theme.color.muted};
 `;
 
 const NavLeft = styled.div`
@@ -33,7 +32,7 @@ const NavRight = styled.div`
     align-items: center;
 `;
 
-function Header() {
+function Header({onClick}:{onClick: VoidFunction}) {
     return (
         <Head>
             <NavLeft>
@@ -45,6 +44,7 @@ function Header() {
             </NavLeft>
             <NavRight>
                 <Link to={"/auth/login"}>로그인</Link>
+                <button onClick={onClick}>테마토글</button>
             </NavRight>
         </Head>
     );
