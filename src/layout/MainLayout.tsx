@@ -18,10 +18,10 @@ const Main = styled.main`
 
 // MainLayout은 컴포넌트 0
 // 얘는 ㅖ게ㅔㄴ 전달
-function MainLayout({onClick}:{onClick: VoidFunction}) {
+function MainLayout() {
     return (
         <Wrap>
-            <Header onClick={onClick} />
+            <Header />
             <Main>
                 <Outlet />
             </Main>

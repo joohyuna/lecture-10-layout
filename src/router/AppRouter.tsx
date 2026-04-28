@@ -4,10 +4,10 @@ import Home from "../pages/Home.tsx";
 import About from "../pages/About.tsx";
 import LogIn from "../pages/LogIn.tsx";
 
-export const AppRouter = (onClick: VoidFunction) => {
+export const AppRouter = () => {
     const routes: RouteObject[] = [
         {
-            element: <MainLayout onClick={onClick} />,
+            element: <MainLayout  />,
             path: "/",
             children: [
                 { index: true, element: <Home /> },
